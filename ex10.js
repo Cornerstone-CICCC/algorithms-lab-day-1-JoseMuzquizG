@@ -3,6 +3,7 @@
 function formatDate(dateStr) {
   const dateArray = dateStr.split("-")
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Septemer", "October", "November", "December"]
+  
   const currentMonth = months[parseInt(dateArray[1]) - 1]
   return `Today is: ${currentMonth} ${dateArray[2]}, ${dateArray[0]}.`
 }
