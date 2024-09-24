@@ -2,11 +2,16 @@
 // Fibonacci sequence: The Fibonacci sequence is a series of numbers in which each number (called a Fibonacci number) is the sum of the two preceding ones. Typically, the sequence starts with 0 and 1. The sequence goes as follows:
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ...
 
+
 function fibonacci(n) {
+  if (n < 0) {
+    return "'n' needs to be 0 or a higher number"
+  }
+
   let number = 0
   let nextNum = 1
   let count = number + nextNum
-
+  
   for (let i = 2; i < n; i++){
     number = nextNum
     nextNum = count
@@ -20,5 +25,8 @@ function fibonacci(n) {
   }
 }
 
-console.log(fibonacci(1)); // Output: 5
-console.log(fibonacci(10)); // Output: 55
+console.log(fibonacci(10));
+
+
+
+
